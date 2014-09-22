@@ -954,7 +954,7 @@ blockquote:before{
 	position:relative;
 }    
 /* fluid galleries */     
-.gallery-columns-3 .gallery-item {
+/*.gallery-columns-3 .gallery-item {
 	width:33%;
 }
 .gallery-columns-4 .gallery-item {
@@ -962,7 +962,7 @@ blockquote:before{
 }
 .gallery-columns-5 .gallery-item {
 	width:20%;
-}
+}*/
 .gallery img {
 	margin:0;
 	border: none !important;

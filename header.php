@@ -19,6 +19,9 @@
 <body <?php body_class(); ?>>	
 	<header role="banner">
 		<div class="top-bar clearfix">
+			
+			<!--<img src="<?php header_image(); ?>">-->
+
 			<h1 class="site-name">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="home"> 
 					<?php bloginfo('name'); ?> 
