@@ -24,9 +24,17 @@
 			</div><!-- end postmeta -->			
 		</article><!-- end post -->
 
+		<section class="pagination">
+			<?php 
+			previous_post_link( '%link ', '&larr; Older Post: %title'  ); //older
+			next_post_link( '%link', 'Newer Post: %title &rarr;' ); //newer
+			?>
+		</section>
+
 		<?php comments_template(); //shows comment list and form ?>
 
 		<?php endwhile; ?>
+
 	<?php else: ?>
 
 	<h2>Sorry, no posts found</h2>

@@ -38,7 +38,17 @@ function awesome_readmore(){
 }
 add_filter( 'excerpt_more', 'awesome_readmore' );
 
-
+/**
+ * Turn on Menu Support
+ * @since 0.1
+ */
+add_action( 'init', 'awesome_menus' );
+function awesome_menus(){
+	register_nav_menus( array(
+		'main_nav' => 'Main Navigation Area',
+		'utilities' => 'Utility Bar area at the top',
+	) );
+}
 
 
 

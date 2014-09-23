@@ -28,20 +28,21 @@
 				</a>
 			</h1>
 			<h2 class="site-description"> <?php bloginfo('description'); ?> </h2>
-			<nav>
-				<ul class="nav">
-					<?php wp_list_pages( array(
-						'depth' => 1,
-						'title_li' => '',
-						) ); ?>
-					</ul>
-				</nav>
+			
+			<?php wp_nav_menu( array(
+				'theme_location' => 'main_nav', //one of the menu areas from functions.php
+				'container' => 'nav', //div or nav
+				'fallback_cb' => '', //prevent ugly list of pages if no menu is assigned
+			) ); ?>
+
 		</div><!-- end .top-bar -->
 		
-		<ul class="utilities">
-			<li><a href="/contact-us/">Contact Us</a></li>
-			<li><a href="/location/">Location</a></li>
-		</ul>
+		<?php wp_nav_menu( array(
+			'theme_location' => 'utilities', //area from functions.php
+			'menu_class' => 'utilities', //for the ul tag class
+			'container' => '', //no container div or nav
+			'fallback_cb' => '',
+		) ); ?>
 		<?php 
 		get_search_form(); //includes searchform.php if it exists, if not, this outputs the default search bar ?>	
 	</header>

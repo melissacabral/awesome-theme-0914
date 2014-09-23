@@ -33,6 +33,19 @@
 		</article><!-- end post -->
 
 		<?php endwhile; ?>
+
+		<section class="pagination">
+			<?php 
+			//if pagenavi plugin is available, use it
+			if(function_exists('wp_pagenavi')){
+				wp_pagenavi();
+			}else{
+				//pagenavi not available, use the standard wordpress navigation
+				previous_posts_link( '&larr; Newer Posts' );
+				next_posts_link( 'Older Posts &rarr;' );
+			}
+			?>
+		</section>
 	<?php else: ?>
 
 	<h2>Sorry, no posts found</h2>
