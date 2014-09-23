@@ -1,3 +1,3 @@
 <aside id="sidebar"> 
-	Page sidebar widgets will go here!
+	<?php dynamic_sidebar( 'Page Sidebar' ); //registered in functions.php ?>
 </aside><!-- end #sidebar -->
