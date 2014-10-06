@@ -31,7 +31,10 @@
 			?>
 		</section>
 
-		<?php comments_template(); //shows comment list and form ?>
+		<?php 
+		//shows comment list and form. 
+		//loads comments.php if it exists
+		comments_template();  ?>
 
 		<?php endwhile; ?>
 

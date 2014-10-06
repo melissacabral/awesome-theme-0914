@@ -19,6 +19,11 @@
 <body <?php body_class(); ?>>	
 	<header role="banner">
 		<div class="top-bar clearfix">
+
+			<?php //get the phone number from the options table
+			$values = get_option( 'rad_options' );
+			
+			echo $values['phone']; ?>
 			
 			<!--<img src="<?php header_image(); ?>">-->
 

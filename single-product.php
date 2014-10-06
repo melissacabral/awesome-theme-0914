@@ -17,6 +17,11 @@
 
 			<div class="entry-content">
 				<?php the_meta(); //show all custom fields in a list ?>
+				
+				<?php the_terms( $post->ID, 'brand', 'Brand: ' ); ?>
+
+				<?php the_terms( $post->ID, 'feature', '<br />Features: ' ); ?>
+
 				<?php the_content(); ?>
 			</div>
 			
@@ -41,5 +46,5 @@
 
 </main><!-- end #content -->
 
-<?php get_sidebar(); //include sidebar.php ?>
+<?php get_sidebar('shop'); //include sidebar.php ?>
 <?php get_footer(); //include footer.php ?>
