@@ -1,5 +1,7 @@
-<?php get_header(); //include header.php ?>
-lorem
+<?php get_header(); //include header.php 
+
+?>
+
 <main id="content">
 	<?php //THE LOOP
 		if( have_posts() ): ?>

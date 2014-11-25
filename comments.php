@@ -7,15 +7,14 @@ if( post_password_required() ){
 	return; //stop this file
 }
 
-
 //separate comment count from trackbacks and pingbacks count
-$comments_by_type = &separate_comments( $comments );
+$comments_by_type = separate_comments( $comments );
 $comment_count = count($comments_by_type['comment']);
 $pings_count = count($comments_by_type['pings']);
 
 ?>
 <section id="comments" class="clearfix">
-	<h3 id="comments-title">
+	<h3 class="comments-title">
 		<?php echo ( $comment_count == 1 ) ?  '1 Comment' :  $comment_count . ' Comments' ?> 
 		<?php if( comments_open() ){ ?>		
 			| <a href="#respond">Leave a Comment</a>
@@ -40,12 +39,13 @@ $pings_count = count($comments_by_type['pings']);
 	<?php comment_form(); ?>
 </section>
 
-<section id="trackbacks">
-	<h3><?php echo $pings_count; ?> Sites Link Here:</h3>
+<section class="trackbacks">
+	<h3 class="comments-title"><?php echo $pings_count; ?> Sites Link Here:</h3>
 
 	<ol>
 		<?php wp_list_comments(array(
 			'type' 	=> 'pings', //list only pingbacks and trackbacks
+			'short_ping'        => true
 		)); ?>
 	</ol>
 </section>
